@@ -60,6 +60,9 @@ class AbstractResult(ABC, Generic[T, E]):
 class Ok(Generic[T], AbstractResult):
     def __init__(self, value: T):
         self._value = value
+        
+    def __repr__(self):
+        return f'Ok({self._value})'
 
     def is_ok(self) -> bool:
         return True
@@ -98,6 +101,9 @@ class Ok(Generic[T], AbstractResult):
 class Err(Generic[E], AbstractResult):
     def __init__(self, err_value: E):
         self._err_value = err_value
+    
+    def __repr__(self):
+        return f'Err({self._err_value})'
 
     def is_ok(self) -> bool:
         return False
