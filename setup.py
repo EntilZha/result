@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='result',
     description='',
-    long_description=long_description,
+    long_description='',
     url='https://github.com/EntilZha/result',
     author='Pedro Rodriguez',
     author_email='ski.rodriguez@gmail.com',
